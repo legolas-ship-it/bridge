@@ -26,7 +26,20 @@ export interface UserProfile {
   incentives: IncentiveProgress; // New
 }
 
-export type TopicCategory = 'Policy' | 'Tech' | 'Economy' | 'Society' | 'International' | 'Science' | 'Culture';
+export type TopicCategory = 
+  | 'Policy' 
+  | 'Tech' 
+  | 'Economy' 
+  | 'Society' 
+  | 'International' 
+  | 'Science' 
+  | 'Culture'
+  | 'Agriculture'    // New
+  | 'Entertainment'  // New
+  | 'Politics'       // New
+  | 'Gaming'         // New
+  | 'History'        // New
+  | 'Space';         // New
 
 export interface Fact {
   content: string;
@@ -117,6 +130,12 @@ export interface HistoricalParallel {
   lesson: string;
 }
 
+export interface LensMetrics {
+  scope: number;      // 0-100, impacts "Impact Scope" ring
+  diversity: number;  // 0-100, impacts "Viewpoint Diversity" ring
+  controversy: number;// 0-100, impacts "Controversy" ring
+}
+
 export interface TopicData {
   id: string;
   title: string;
@@ -125,6 +144,13 @@ export interface TopicData {
   whyMatters: string;
   category: TopicCategory;
   isInternational?: boolean; // New: For Home Feed filtering/highlighting
+  
+  // New Card Fields
+  readingTime?: number; // Minutes
+  coreTension?: string; // e.g. "Privacy <-> Efficiency"
+  tensionLabel?: string; // e.g. "Key Trade-off" or "Core Tension"
+  impactHint?: string; // e.g. "Affects future employment paths"
+  lensMetrics?: LensMetrics;
   
   // Tab 1: Facts & Prediction
   facts: Fact[];

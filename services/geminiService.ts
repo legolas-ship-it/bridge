@@ -50,12 +50,24 @@ export const generateTopicSummary = async (query: string, userProfile?: UserProf
     
     Goal: Provide a quick, high-level summary and factual basis tailored to the user profile above.
     
+    STYLE GUIDELINES (CRITICAL):
+    - 'whyMatters': Use declarative sentences. Avoid questions. Use paragraph breaks ('\\n\\n') to create rhythm.
+    - 'impactHint': A subtle, ambient observation about daily life impact. Do NOT address the user directly as 'you'. (e.g., "Commute times are shifting..." instead of "Your commute...")
+    - 'coreTension': Identify a structural trade-off (e.g. "Privacy <-> Safety"). Only if a strong, fundamental tension exists. If weak, leave null.
+    - 'tensionLabel': Label the tension as "Core Tension" or "Key Trade-off" depending on severity.
+    - 'lensMetrics': Estimate 3 values (0-100): scope (impact reach), diversity (opinion variety), controversy (conflict heat).
+    
     Generate a JSON response matching:
     {
       "title": "Clear concise title",
       "summary": "2-sentence abstract of the event (for list view)",
       "newsNarrative": "3-paragraph journalistic summary of the event (approx 150-200 words). Objective, AP-style tone.",
-      "whyMatters": "Why this is important",
+      "whyMatters": "Why this is important (Declarative, broken into paragraphs)",
+      "impactHint": "Ambient impact on daily life",
+      "coreTension": "A <-> B",
+      "tensionLabel": "Core Tension",
+      "readingTime": 3,
+      "lensMetrics": { "scope": 50, "diversity": 50, "controversy": 50 },
       "facts": [{"content": "fact 1", "confidence": "High"}, ...],
       "dataCutoff": "YYYY-MM-DD"
     }
@@ -73,6 +85,18 @@ export const generateTopicSummary = async (query: string, userProfile?: UserProf
           summary: { type: Type.STRING },
           newsNarrative: { type: Type.STRING },
           whyMatters: { type: Type.STRING },
+          impactHint: { type: Type.STRING },
+          coreTension: { type: Type.STRING },
+          tensionLabel: { type: Type.STRING },
+          readingTime: { type: Type.INTEGER },
+          lensMetrics: {
+            type: Type.OBJECT,
+            properties: {
+              scope: { type: Type.NUMBER },
+              diversity: { type: Type.NUMBER },
+              controversy: { type: Type.NUMBER }
+            }
+          },
           facts: {
             type: Type.ARRAY,
             items: {
@@ -85,7 +109,7 @@ export const generateTopicSummary = async (query: string, userProfile?: UserProf
           },
           dataCutoff: { type: Type.STRING },
         },
-        required: ["title", "summary", "newsNarrative", "whyMatters", "facts"]
+        required: ["title", "summary", "newsNarrative", "whyMatters", "facts", "lensMetrics"]
       }
     }
   });

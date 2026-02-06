@@ -19,6 +19,33 @@ export const TRANSLATIONS = {
     newUpdates: "new updates",
     footer: "Bridge © 2024. Helping you see the whole picture.",
     
+    // Feed Tabs
+    feedTrending: "Everyone's Watching",
+    feedPerspective: "Shift Perspective",
+    feedUnderreported: "Underreported",
+    feedCuriosity: "Curiosity",
+    
+    descTrending: "Selected hot topics covering different fields.",
+    descPerspective: "See the same story from a different identity or standpoint.",
+    descUnderreported: "Jump out of mainstream headlines, focus on neglected corners.",
+    descCuriosity: "If you feel today's content is all the same, try clicking here.",
+
+    // Sub-Category Tabs
+    all: "All",
+    catAgriculture: "Agriculture",
+    catTech: "Tech",
+    catEconomy: "Economy",
+    catSociety: "Society",
+    catCulture: "Culture",
+    catEntertainment: "Entertainment",
+    catPolitics: "Politics",
+    catGaming: "Gaming",
+    catHistory: "History",
+    catSpace: "Space",
+    catPolicy: "Policy",
+    catInternational: "International",
+    catScience: "Science",
+
     // Profile Page
     personalCenter: "Personal Center",
     manageProfile: "Manage profile, insights & cognitive health",
@@ -95,7 +122,7 @@ export const TRANSLATIONS = {
     catAcademic: "Professional Citations",
     catReport: "Industry Reports",
     catCase: "International Cases",
-    catHistory: "Historical Parallels",
+    extHistory: "Historical Parallels",
     unlockPro: "Unlock with Pro",
 
     // Cocoon Report

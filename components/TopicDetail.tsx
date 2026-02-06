@@ -182,11 +182,11 @@ const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onBack, isFavorite, on
                {topic.controversyPrediction && (
                  <div className={cardContainerStyle}>
                     <div className="flex items-center justify-between mb-3">
-                      <h4 className={cardHeaderStyle.replace('mb-3', 'mb-0')}>
+                      <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wide flex items-center gap-2 mb-0">
                         <TrendingUp size={16} />
                         Risk Monitor
                       </h4>
-                      <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${getRiskColor(topic.controversyPrediction.riskLevel)}`}>
+                      <span className={`px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider ${getRiskColor(topic.controversyPrediction.riskLevel)}`}>
                         {getRiskLabel(topic.controversyPrediction.riskLevel)}
                       </span>
                     </div>
@@ -198,13 +198,13 @@ const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onBack, isFavorite, on
                            style={{ width: `${topic.controversyPrediction.score}%` }} 
                          />
                        </div>
-                       <div className="flex justify-between text-[9px] text-slate-400 mt-1.5 font-mono uppercase tracking-wider font-semibold">
+                       <div className="flex justify-between text-[10px] text-slate-400 mt-1.5 font-mono uppercase tracking-wider font-semibold">
                          <span>{t('stable')}</span>
                          <span>{t('volatile')}</span>
                        </div>
                     </div>
 
-                    <p className="text-xs text-slate-600 leading-relaxed font-medium bg-slate-50 p-3 rounded border border-slate-100">
+                    <p className="text-sm text-slate-600 leading-relaxed font-medium bg-slate-50 p-3 rounded border border-slate-100">
                       {topic.controversyPrediction.reasoning}
                     </p>
                  </div>
@@ -212,7 +212,7 @@ const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onBack, isFavorite, on
 
               {/* Facts List */}
               <div className={cardContainerStyle}>
-                <h3 className={cardHeaderStyle}>
+                <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wide flex items-center gap-2 mb-3">
                   <CheckCircle2 size={16} />
                   {t('objectiveFacts')}
                 </h3>
@@ -221,13 +221,13 @@ const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onBack, isFavorite, on
                   {topic.facts.map((fact, i) => (
                     <div key={i} className="bg-slate-50 p-3 rounded-lg border border-slate-100 hover:border-emerald-200 transition-colors">
                       <div className="flex justify-between items-start gap-2 mb-1">
-                         <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wide border ${
+                         <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wide border ${
                             fact.confidence === 'High' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : 'bg-amber-50 text-amber-700 border-amber-100'
                           }`}>
                             {fact.confidence}
                         </span>
                       </div>
-                      <p className="text-slate-800 text-xs font-medium leading-relaxed">{fact.content}</p>
+                      <p className="text-slate-800 text-sm font-medium leading-relaxed">{fact.content}</p>
                     </div>
                   ))}
                 </div>
@@ -235,11 +235,11 @@ const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onBack, isFavorite, on
 
                {/* Key Insight */}
                <div className={cardContainerStyle}>
-                 <h3 className={cardHeaderStyle}>
+                 <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wide flex items-center gap-2 mb-3">
                     <Zap size={16} />
                     The Bottom Line
                  </h3>
-                 <p className="text-slate-800 text-sm font-medium leading-relaxed italic border-l-2 border-blue-400 pl-3">
+                 <p className="text-slate-800 text-base font-medium leading-relaxed italic border-l-2 border-blue-400 pl-3">
                    "{topic.whyMatters}"
                  </p>
                </div>
@@ -464,7 +464,7 @@ const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onBack, isFavorite, on
                             <div className="bg-slate-900/90 p-6 hover:bg-slate-800/80 transition-colors">
                                 <div className="flex items-center gap-2 mb-3 text-amber-300">
                                     <History size={18} />
-                                    <span className="text-xs font-bold uppercase tracking-wider">{t('catHistory') || "Historical Parallels"}</span>
+                                    <span className="text-xs font-bold uppercase tracking-wider">{t('extHistory') || "Historical Parallels"}</span>
                                 </div>
                                 <div className="flex items-center gap-2 mb-2">
                                     <span className="bg-slate-800 text-slate-300 px-2 py-0.5 rounded text-[10px] font-mono">{historyExt?.year}</span>

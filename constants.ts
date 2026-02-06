@@ -1,3 +1,4 @@
+
 import { TopicData } from "./types";
 
 export const INCENTIVE_GOALS = {
@@ -11,12 +12,17 @@ export const INCENTIVE_GOALS = {
 export const MOCK_TOPICS: TopicData[] = [
   {
     id: "1",
-    title: "Global AI Regulation Summit 2024",
+    title: "The Geneva AI Accord",
     category: "Tech",
     isInternational: true,
     summary: "Nations convene to establish baseline safety protocols for advanced AI models, balancing innovation speed with safety guardrails.",
-    newsNarrative: "GENEVA — In a landmark assembly this week, delegates from over 40 nations convened in Geneva to draft the first comprehensive Global Treaty on Artificial Intelligence Safety. The summit, precipitated by rapid advancements in generative models, aims to establish a baseline for 'Red Line' capabilities—features deemed too dangerous for open deployment without oversight. Negotiations have been intense, with significant friction observed between the 'Safety First' bloc, led by the EU, and nations favoring a more laissez-faire approach to foster rapid innovation.\n\nThe core agreement reached on Thursday involves a tiered classification system for AI models based on compute power and capability benchmarks. Models exceeding a specific threshold of floating-point operations will be subject to mandatory external auditing and 'kill switch' integration. However, the enforcement mechanism remains a point of contention. Developing nations have expressed concern that compliance costs could entrench the dominance of established tech giants in the US and China, effectively shutting out smaller players from the global market.\n\nOutside the convention center, a diverse coalition of protestors—ranging from labor unions fearing automation-driven unemployment to open-source advocates warning against centralized control of knowledge—staged demonstrations. Their presence underscored the high stakes of the summit: beyond the technical protocols, the delegates are effectively negotiating the future distribution of economic power and the structure of the digital workforce for the next decade.",
-    whyMatters: "Determines the pace of technological adoption and safety nets for the next decade of workforce automation.",
+    newsNarrative: "GENEVA — In a landmark assembly this week, delegates from over 40 nations convened in Geneva to draft the first comprehensive Global Treaty on Artificial Intelligence Safety...",
+    whyMatters: "The barrier to entry for coding might soon include a million-dollar compliance license.\n\nWe are currently deciding whether the next industrial revolution will be driven by open innovation or consolidated within a few entrenched giants.",
+    impactHint: "Future job markets are quietly being reshaped by unseen screening standards.", 
+    readingTime: 4,
+    coreTension: "Safety ↔ Open Innovation",
+    tensionLabel: "Core Tension",
+    lensMetrics: { scope: 90, diversity: 60, controversy: 85 },
     facts: [
       { content: "Delegates from 40 countries present.", confidence: "High" },
       { content: "Agreement reached on 'Red Line' capabilities.", confidence: "High" }
@@ -152,12 +158,17 @@ export const MOCK_TOPICS: TopicData[] = [
   },
   {
     id: "11",
-    title: "Brazil vs. Big Tech Sovereignty",
-    category: "International",
+    title: "Brazil's Digital Sovereignty Stand",
+    category: "Politics",
     isInternational: true,
     summary: "Judicial freeze on social media assets highlights the growing conflict between national digital sovereignty and stateless tech platforms.",
-    newsNarrative: "BRASILIA — The standoff between Brazilian judicial authorities and international technology platforms escalated sharply this week when the Supreme Federal Court ordered a freeze on the financial assets of Starlink. This move comes as a direct response to ongoing disputes over content moderation compliance and fines levied against social media giant X (formerly Twitter). The court asserts that foreign entities operating within Brazil must adhere to local laws regarding hate speech and misinformation, viewing the asset freeze as a necessary enforcement mechanism.\n\nThe conflict highlights a growing geopolitical tension: the clash between national digital sovereignty and the borderless nature of modern internet infrastructure. Proponents of the court's decision argue that tech platforms have acted with impunity for too long, effectively bypassing national legal systems. Conversely, critics and tech advocates view the asset freeze—targeting a separate company under the same ownership umbrella—as an overreach that could chill foreign investment and disrupt critical internet services for thousands of rural Brazilians who rely on satellite connectivity.\n\nAs the legal battle unfolds, it serves as a bellwether for other nations grappling with similar issues. Countries around the world are watching closely to see if Brazil's aggressive stance will force concessions from Big Tech or lead to a service withdrawal, setting a precedent for the future of global internet governance.",
-    whyMatters: "Sets a precedent for how Global South nations might enforce local laws on multinational giants.",
+    newsNarrative: "BRASILIA — The standoff between Brazilian judicial authorities and international technology platforms escalated sharply...",
+    whyMatters: "A localized court order now ripples across global infrastructure.\n\nWhen digital borders harden, the universal web begins to fracture into national intranets, changing how information flows across the world.",
+    impactHint: "Digital services are becoming increasingly geographically conditional.", 
+    readingTime: 3,
+    coreTension: "National Law ↔ Borderless Web",
+    tensionLabel: "Key Trade-off",
+    lensMetrics: { scope: 75, diversity: 40, controversy: 95 },
     facts: [
       { content: "Supreme Court froze bank accounts of Starlink.", confidence: "High" },
       { content: "Dispute originated over content moderation orders.", confidence: "High" }
@@ -173,24 +184,29 @@ export const MOCK_TOPICS: TopicData[] = [
         {
             title: "Legal Concept: Corporate Veil Piercing",
             type: "Case",
-            description: "The Brazilian court's decision to freeze Starlink assets to pay for X's fines relies on a legal theory known as 'piercing the corporate veil' (or specifically in Brazil, 'economic group responsibility').\n\nNormally, distinct companies—even if owned by the same person—are treated as separate legal entities to limit liability. However, Brazilian law allows courts to ignore this separation if they believe the structure is being used to evade legal obligations or obstruct justice.\n\nThis is a controversial application in international law because Starlink and X have different shareholders and boards, despite the shared ownership by Elon Musk. If this precedent stands, it implies that multinational conglomerates can be held collectively liable for the actions of any single subsidiary in Brazil, significantly increasing the risk for global investors."
+            description: "The Brazilian court's decision to freeze Starlink assets to pay for X's fines relies on a legal theory known as 'piercing the corporate veil'..."
         },
         {
             title: "Context: The 'Splinternet'",
             type: "Academic",
-            description: "We are witnessing the acceleration of the 'Splinternet'—the fragmentation of the global internet into distinct national blocks regulated by local laws.\n\nFor the first 20 years of the web, the prevailing philosophy was 'Cyber-Libertarianism' (the internet as a borderless space). Today, we are moving toward 'Cyber-Westphalianism' (the internet as a collection of sovereign territories). Brazil's actions, along with the EU's GDPR and China's Great Firewall, represent the re-assertion of the nation-state.\n\nThe mechanism at play here is 'Chokepoint Control'. Governments cannot easily control data flow, but they can control assets (bank accounts) and infrastructure (ISPs). By targeting the financial assets of a related company (Starlink), Brazil is demonstrating that physical jurisdiction still trumps digital ubiquity."
+            description: "We are witnessing the acceleration of the 'Splinternet'—the fragmentation of the global internet into distinct national blocks..."
         }
     ], 
     sourceCount: 92, lastUpdated: "1 hour ago"
   },
   {
     id: "12",
-    title: "Japan's Depopulation Strategy Shift",
-    category: "Culture",
+    title: "Japan's Automation Gamble",
+    category: "Society",
     isInternational: true,
     summary: "Japan introduces radical new visa policies and automation incentives to combat terminal demographic decline.",
-    newsNarrative: "TOKYO — Facing an existential demographic crisis, the Japanese government has unveiled a suite of radical policy shifts aimed at stabilizing its shrinking workforce. With the population falling by over 800,000 in the last year alone, traditional resistance to immigration is giving way to pragmatic economic necessity. The new measures include the launch of a 'Digital Nomad' visa and expanded pathways to permanent residency for skilled blue-collar workers, marking a significant departure from Japan's historically insular approach.\n\nSimultaneously, the strategy doubles down on technological solutions. Massive subsidies are being rolled out for robotics and AI integration in sectors like elder care, agriculture, and logistics. The government envisions a 'Society 5.0' where automation fills the labor gap left by a retiring workforce. However, these changes are not without cultural friction. Conservative factions worry about the erosion of social homogeneity, while younger generations express concern that automation might suppress wages even as labor becomes scarce.\n\nJapan's experiment is being viewed as a test case for the developed world. As nations like Germany, South Korea, and China face similar aging trajectories, the success or failure of Japan's hybrid approach—combining targeted immigration with aggressive automation—will likely inform global policy for decades to come.",
-    whyMatters: "Offers a glimpse into the future for other aging developed nations (Germany, Korea, China).",
+    newsNarrative: "TOKYO — Facing an existential demographic crisis, the Japanese government has unveiled a suite of radical policy shifts...",
+    whyMatters: "Japan is the canary in the coal mine for all aging developed nations.\n\nThey are attempting to replace a shrinking workforce with robotics and digital nomads. Success saves the economy; failure risks cultural collapse.",
+    impactHint: "Pension systems rely on a working population that may soon not exist.", 
+    readingTime: 5,
+    coreTension: "Homogeneity ↔ Economic Survival",
+    tensionLabel: "Core Tension",
+    lensMetrics: { scope: 60, diversity: 30, controversy: 50 },
     facts: [
       { content: "Population fell by 800k last year.", confidence: "High" },
       { content: "New 'Digital Nomad' visa launched.", confidence: "High" }
@@ -203,11 +219,16 @@ export const MOCK_TOPICS: TopicData[] = [
   },
   {
     id: "2",
-    title: "Urban Congestion Tax Implementation",
+    title: "The Price of Urban Entry",
     category: "Society",
     summary: "Major metropolitan areas introduce dynamic pricing for entering city centers during peak hours to reduce emissions and traffic.",
-    newsNarrative: "NEW YORK — The Metropolitan Transportation Authority has officially approved a congestion pricing plan that will charge drivers a $15 daily fee to enter the central business district below 60th Street. The initiative, modeled after similar systems in London and Singapore, is designed to reduce chronic traffic gridlock and cut carbon emissions, while simultaneously generating billions in revenue to upgrade the city's aging subway infrastructure.\n\nThe policy has ignited a fierce debate between urban planners and suburban commuters. Supporters hail it as a victory for public health and environmental justice, pointing to projected decreases in air pollution and faster emergency response times. They argue that city streets are a scarce resource that should be priced to reflect their value. However, opponents, particularly those from the outer boroughs and New Jersey, decry the tax as punitive for working-class drivers who lack reliable public transit alternatives.\n\nLegal challenges are already mounting, with lawsuits filed by neighboring states and trucking associations. Despite the backlash, city officials remain firm, citing the urgent need for transit funding. The implementation phase, set to begin this spring, will be closely monitored as a potential blueprint for other gridlocked American cities like Los Angeles and Boston.",
-    whyMatters: "Directly impacts daily commute costs, retail logistics, and urban air quality.",
+    newsNarrative: "NEW YORK — The Metropolitan Transportation Authority has officially approved a congestion pricing plan...",
+    whyMatters: "We are putting a literal price tag on public pavement.\n\nWhile aimed at reducing emissions, this shifts the cost of clean air onto the working class who cannot afford to live in the city center.",
+    impactHint: "The cost of a morning commute is being recalculated for everyone.", 
+    readingTime: 3,
+    coreTension: "Efficiency ↔ Equity",
+    tensionLabel: "Key Trade-off",
+    lensMetrics: { scope: 40, diversity: 80, controversy: 70 },
     facts: [
       { content: "$15 daily fee for peak hours.", confidence: "High" },
       { content: "Exemptions for emergency vehicles and disability transport.", confidence: "High" }
@@ -222,12 +243,21 @@ export const MOCK_TOPICS: TopicData[] = [
     controversyPrediction: { score: 40, riskLevel: "Medium", reasoning: "Protests likely in short term but data shows acceptance usually grows after 1 year." },
     terms: [], extensions: [], sourceCount: 89, lastUpdated: "10:38 AM"
   },
-  { id: "3", title: "Central Bank Digital Currencies", category: "Economy", summary: "Nations piloting digital currency.", whyMatters: "Privacy vs Efficiency.", facts: [], dataCutoff: "2024", sourceCount: 200, lastUpdated: "9:00 AM" },
-  { id: "4", title: "Deep Sea Mining Permits", category: "International", summary: "Mining rare earth metals.", whyMatters: "Batteries vs Ecology.", facts: [], dataCutoff: "2024", sourceCount: 65, lastUpdated: "11:00 AM" },
-  { id: "5", title: "Social Media Age Verification", category: "Policy", summary: "ID for social media.", whyMatters: "Safety vs Privacy.", facts: [], dataCutoff: "2024", sourceCount: 112, lastUpdated: "08:45 AM" },
-  { id: "6", title: "CRISPR Gene Editing", category: "Science", summary: "Germline editing debate.", whyMatters: "Curing disease vs Eugenics.", facts: [], dataCutoff: "2024", sourceCount: 98, lastUpdated: "12:10 PM" },
-  { id: "7", title: "4-Day Work Week", category: "Society", summary: "Productivity trials.", whyMatters: "Work-life balance.", facts: [], dataCutoff: "2024", sourceCount: 150, lastUpdated: "09:50 AM" },
-  { id: "8", title: "Space Sovereignty", category: "International", summary: "Moon mining rights.", whyMatters: "Future resources.", facts: [], dataCutoff: "2024", sourceCount: 77, lastUpdated: "07:30 AM" },
-  { id: "9", title: "Global Minimum Tax", category: "Economy", summary: "15% corporate tax.", whyMatters: "Fairness vs Sovereignty.", facts: [], dataCutoff: "2024", sourceCount: 130, lastUpdated: "02:15 PM" },
-  { id: "10", title: "Lab-Grown Meat", category: "Science", summary: "Cultivated meat sales.", whyMatters: "Climate vs Tradition.", facts: [], dataCutoff: "2024", sourceCount: 105, lastUpdated: "01:00 PM" }
+  { 
+    id: "3", title: "The End of Cash?", category: "Economy", summary: "Nations piloting digital currency.", whyMatters: "Digital convenience often comes at the cost of financial anonymity.\n\nEvery transaction becoming a data point fundamentally changes the nature of private commerce.", 
+    readingTime: 4, coreTension: "Privacy ↔ Efficiency", tensionLabel: "Key Trade-off", lensMetrics: { scope: 95, diversity: 50, controversy: 80 }, facts: [], dataCutoff: "2024", sourceCount: 200, lastUpdated: "9:00 AM" 
+  },
+  { 
+    id: "4", title: "Mining the Abyss", category: "Agriculture", summary: "Mining rare earth metals.", whyMatters: "Green energy requires batteries, and batteries require metals found on the ocean floor.\n\nSaving the climate above water might require destroying the ecosystem below it.", 
+    readingTime: 3, lensMetrics: { scope: 60, diversity: 70, controversy: 60 }, facts: [], dataCutoff: "2024", sourceCount: 65, lastUpdated: "11:00 AM" 
+  },
+  { id: "5", title: "Social Media Age Verification", category: "Politics", summary: "ID for social media.", whyMatters: "Safety laws are colliding with privacy rights.", readingTime: 2, lensMetrics: { scope: 80, diversity: 40, controversy: 50 }, facts: [], dataCutoff: "2024", sourceCount: 112, lastUpdated: "08:45 AM" },
+  { id: "6", title: "CRISPR Gene Editing", category: "Science", summary: "Germline editing debate.", whyMatters: "We now have the tools to direct our own evolution.", readingTime: 6, coreTension: "Health ↔ Ethics", tensionLabel: "Core Tension", lensMetrics: { scope: 90, diversity: 90, controversy: 90 }, facts: [], dataCutoff: "2024", sourceCount: 98, lastUpdated: "12:10 PM" },
+  { id: "7", title: "4-Day Work Week", category: "Society", summary: "Productivity trials.", whyMatters: "The standard work week is being renegotiated.", readingTime: 3, lensMetrics: { scope: 50, diversity: 30, controversy: 40 }, facts: [], dataCutoff: "2024", sourceCount: 150, lastUpdated: "09:50 AM" },
+  { id: "8", title: "Space Sovereignty", category: "Space", summary: "Moon mining rights.", whyMatters: "Old geopolitical rivalries are launching into orbit.", readingTime: 4, lensMetrics: { scope: 20, diversity: 20, controversy: 30 }, facts: [], dataCutoff: "2024", sourceCount: 77, lastUpdated: "07:30 AM" },
+  { id: "9", title: "Global Minimum Tax", category: "Economy", summary: "15% corporate tax.", whyMatters: "Tax havens are facing a unified global challenge.", readingTime: 5, lensMetrics: { scope: 85, diversity: 60, controversy: 60 }, facts: [], dataCutoff: "2024", sourceCount: 130, lastUpdated: "02:15 PM" },
+  { id: "10", title: "Lab-Grown Meat", category: "Agriculture", summary: "Cultivated meat sales.", whyMatters: "Food production is decoupling from agriculture.", readingTime: 3, lensMetrics: { scope: 40, diversity: 50, controversy: 70 }, facts: [], dataCutoff: "2024", sourceCount: 105, lastUpdated: "01:00 PM" },
+  { id: "13", title: "Indie Game Renaissance", category: "Gaming", summary: "Small studios are outselling AAA giants as players tire of microtransactions.", whyMatters: "A shift in digital culture from monetization to creativity.", readingTime: 2, lensMetrics: { scope: 30, diversity: 60, controversy: 20 }, facts: [], dataCutoff: "2024", sourceCount: 50, lastUpdated: "03:15 PM" },
+  { id: "14", title: "The Return of Vinyl", category: "Entertainment", summary: "Physical media sales hit 30-year high.", whyMatters: "A tactile rebellion against the ephemeral nature of streaming.", readingTime: 2, lensMetrics: { scope: 20, diversity: 10, controversy: 10 }, facts: [], dataCutoff: "2024", sourceCount: 40, lastUpdated: "05:00 PM" },
+  { id: "15", title: "Lost Cities of the Amazon", category: "History", summary: "LiDAR reveals ancient urban sprawls in the rainforest.", whyMatters: "We are rewriting the history of human civilization in the Americas.", readingTime: 5, lensMetrics: { scope: 50, diversity: 80, controversy: 30 }, facts: [], dataCutoff: "2024", sourceCount: 120, lastUpdated: "11:30 AM" }
 ];
