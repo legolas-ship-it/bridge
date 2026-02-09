@@ -219,16 +219,13 @@ const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onBack, isFavorite, on
                     </div>
                 </div>
 
-                {/* BOTTOM ROW: Map & Sim (Grid of 12) */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 h-auto lg:h-[500px]">
-                    
-                    {/* Situation Map (8 Cols) */}
-                    <div className="lg:col-span-8 h-[500px] lg:h-full">
-                        <SituationMap stakeholders={topic.stakeholders} language={language} />
-                    </div>
+                {/* Situation Map (Full Width Row) */}
+                <div className="h-[500px] w-full">
+                    <SituationMap stakeholders={topic.stakeholders} language={language} />
+                </div>
 
-                    {/* Role Play (4 Cols) */}
-                    <div className="lg:col-span-4 h-auto lg:h-full">
+                {/* Role Play (Full Width Row) */}
+                <div className="h-[600px] w-full">
                          {/* Pass full topic to allow chat context */}
                          <RolePlayGame 
                            data={topic.rolePlay} 
@@ -237,7 +234,6 @@ const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onBack, isFavorite, on
                            userProfile={userProfile}
                            onUpgradeClick={onUpgradeClick}
                          />
-                    </div>
                 </div>
               </>
             )}
